@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>{{ app_name }}</title>
+  {{ css_link }}
+
+</head>
+<body>
+<center><h2>Create a new Event:</h2></center>
+<form id="post_form" method="POST">
+  <table id="post_table">
+    <tr>
+      <td><div class="form_label">Date:</div></td><td><input type="text" name="event_date" value="{{ todays_date }}"/></td></tr>
+    <tr>
+      <td><div class="form_label">Title:</div></td><td><input type="text" name="event_title" value="{{ sample_event_title }}" /></td></tr>
+    <tr>
+      <td colspan="2"><div class="form_label">Description:</div>
+<textarea name="event_description" cols="25"
+  rows"5">{{ sample_event_description }}</textarea></td></tr>
+    <tr>
+      <td colspan="2"><div class="form_label">Attendees:</div>
+<select name="event_attendees" id="event_attendees" multiple="true">
+{% for item in contacts.items %}
+  <option value="{{ item.1 }}">{{ item.0 }}</option>
+{% endfor %}
+</select><br /><br />
+<small>Use the 'Control' or 'Apple' Key to select multiple.</small><br/>
+<br /></td></tr>
+<tr>
+      <td colspan="2"><input type="submit" value="Submit!" /></td></tr></table>
+</form>
+{% if logout_url %}
+<div style="main">
+<a href="{{ logout_url }}">Sign out</a>
+</div>
+{% endif %}
+</body>
+</html>

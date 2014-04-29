@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>{{ app_name }}</title>
+  {{ css_link }}
+</head>
+<body>
+<center><h1>{{ app_name }}</h1></center>
+<table align=center><tr><td><img src="/images/SportsLogo.gif" /></td></tr></table>
+{% if login_url %}
+<div id="main">
+<h2>Access is needed to your Google Calendar and Contacts to use this application!</h2>
+<h2>Please click the link below if you wish to continue,</h2>
+<h2>if you have any difficulty sharing your data with us, just close this window now!</h2>
+  <a href="{{ login_url}}">Sign in</a>
+</div>
+{% endif %}
+</body>
+</html>

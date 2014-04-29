@@ -1,0 +1,39 @@
+﻿          <div id="lefttxt">
+          <table>
+              <tr>
+                  <td valign=top>
+                      <form id="post_form" method="POST">
+                        <table border=0 width=550px>
+                        <tr valign=top><td class="eventheader">Event:</td><td class="eventtext">{{ eventname }}</td></tr>
+                        <tr valign=top><td class="eventheader">Creator:</td><td class="eventtext">{{ author }}</td></tr>
+                        <tr valign=top><td class="eventheader">Description:</td><td class="eventtext">{{ description }}</td></tr>
+                        <tr valign=top><td class="eventheader">Date:</td><td class="eventtext">{{ date }}</td></tr>
+                        <tr valign=top><td class="eventheader">Location:</td><td class="eventtext" onclick="map_load();">{{ location }}
+                            <br />
+                            <div align="center" id="map" style="width: 400px; height: 300px;"><br/></div>
+                        </td></tr>
+                        </table>
+                        <input type="hidden" name="lat" id="lat" value="{{ coord1 }}" />
+                        <input type="hidden" name="lng" id="lng" value="{{ coord2 }}" />
+                        <table>
+                        <tr><td>
+                        </td></tr>
+                        </table>
+                        <table>
+                          <tr>
+                            <td><input type="button" value="Attend Event" onclick="AddEventToCalendar('{{ eid }}', '{{ eventname }}', '{{ description }}', '{{ date }}', '{{ location }}')" /><br /><br />
+                            </td>
+                          </tr>
+             
+                      </table>
+                                                    
+                     </form>
+                  </td>
+              </tr>
+          </table>
+          <table><tr><td></td></tr></table>
+          </div>
+          
+          <script type="text/javascript">
+          load({{ coord1 }}, {{ coord2 }});
+          </script>

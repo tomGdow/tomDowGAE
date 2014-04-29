@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>{{ app_name }}</title>
+  {{ css_link }}
+</head>
+<body>
+<center><h2>{{ app_name }}</h2></center>
+<div id="main">
+<p>
+<span class="highlight">Event status:</b> {{ event_status }}</span>
+{% ifequal event_status "created" %}<br /><br />
+&ndash; <a href="{{ alt_link }}">View Event in Google Calendar (alt link)</a><br />
+{% endifequal %}
+</p>
+<table id="display_table" cellpadding="5">
+  <tr>
+    <td><b>Event title:</b></td><td class="gray">{{ event_title.value }}</td>
+  </tr>
+  <tr>
+    <td><b>Event description:</b></td><td class="gray">{{ event_description.value }}</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Event attendees:</b></td>
+    <td class="gray">{% for event_attendee in attendee_list %}
+      &ndash; {{ event_attendee }}<br />
+      {% endfor %}</td>
+  </tr>
+</table>
+<div style="another">
+<a href="/">Create another event</a><br />
+<a href="{{ logout_url }}">Sign out</a>
+</div>
+</div> 
+</body>
+</html>
+

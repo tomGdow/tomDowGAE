@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gaestyles/gaestyles.iml" filepath="$PROJECT_DIR$/gaestyles/gaestyles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/static/js/js.iml" filepath="$PROJECT_DIR$/static/js/js.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main_templates/main_templates.iml" filepath="$PROJECT_DIR$/main_templates/main_templates.iml" />
+    </modules>
+  </component>
+</project>
+

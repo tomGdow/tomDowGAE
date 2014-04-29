@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Spoirt Chara 2</title>
+    <link type="text/css" rel="stylesheet" href="/css/Complete.css" />
+	<script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="/js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="/js/jquery.ui.datepicker.js"></script>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAWjhbOY0D3sv2pmdkVgqFURT5FMJh5cWC-P-IKueY88ewXzQdfxRril6YgDECCqK1rWib6H-TglhTqw" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function load(x,y) {
+            if (GBrowserIsCompatible()) {
+                var map = new GMap2(document.getElementById("map"));
+                map.addControl(new GSmallMapControl());
+                map.addControl(new GMapTypeControl());
+                var center = new GLatLng(x,y);
+                map.setCenter(center, 15);
+                geocoder = new GClientGeocoder();
+                var marker = new GMarker(center, { draggable: true });
+                map.addOverlay(marker);
+                document.getElementById("lat").value = center.lat().toFixed(5);
+                document.getElementById("lng").value = center.lng().toFixed(5);
+
+                
+
+            }
+        }
+
+        
+    </script>
+    
+</head>
+
+<body onunload="GUnload()" >
+<h2>Event Viewer</h2>
+          <table>
+              <tr>
+                  <td valign=top>
+                      <form id="post_form" method="POST">
+                        <table>
+                        <tr><td>Event:</td><td>{{ eventname }}</td></tr>
+                        <tr><td>Creator:</td><td>{{ author }}</td></tr>
+                        <tr><td>Description:</td><td>{{ description }}</td></tr>
+                        <tr><td>Date:</td><td>{{ date }}</td></tr>
+                        <tr><td>Location:</td><td>{{ location }}</td></tr>
+                        </table>
+                        <input type="hidden" name="lat" id="lat" />
+                        <input type="hidden" name="lng" id="lng" />
+                        <table>
+                        <tr><td>
+                        </td></tr>
+                        </table>
+                        <table>
+                          <tr>
+                            <td><input type="button" value="Attend Event" /><br /><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Post a Comment:<br />
+                                <textarea name="event_comment" rows="4" cols="20"></textarea><br />
+                                <input type="button" value="Post Comment" />
+                            </td>
+                          </tr>
+              
+                      </table>
+                                                    
+                     </form>
+                  </td>
+                  <td valign=top>
+                      <div align="center" id="map" style="width: 400px; height: 300px"><br/></div>
+                  </td>
+              </tr>
+          </table>
+          <table><tr><td></td></tr></table>
+          <script type="text/javascript">
+          load({{ coord1 }}, {{ coord2 }});
+          </script>
+          
+</body>
+</html>

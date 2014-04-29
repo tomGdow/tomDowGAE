@@ -1,0 +1,21 @@
+application: zaradowfriends
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /js
+  static_dir: static/js
+  mime_type: text/javascript
+
+- url: /css
+  static_dir: static/css
+
+- url: /images
+  static_dir: images
+
+- url: .*
+  script: main.py

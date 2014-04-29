@@ -1,0 +1,57 @@
+<html>
+  <head>
+                  <style type="text/css">
+                    body
+	                {
+		                margin:0px;
+		                padding:0px;
+		                background-image:url(/images/addevent.jpg);
+		                background-repeat:repeat-x;
+		                background-color:#bbcd72;
+	                }
+                  .eventheader
+                  {
+                      font-family: Arial;
+                      font-size: 16px;
+                      font-weight: bold;
+                      color: #990000;
+                  }
+                  .eventtext
+                  {
+                      font-family: Arial;
+                      font-size: 16px;
+                      font-weight: bold;
+                      color: #0000A0;
+                  }
+                  .tblheader
+                  {
+                      font-family: Arial;
+                      font-size: 16px;
+                      font-weight: bold;
+                      color: #990000;
+                  }
+              </style>
+  </head>
+
+  <body>
+  <h1 align=center>User Registration</h1>
+    <form action="/sign" method="post">
+    <table align=center class="tblheader">
+    <tr><td>First Name:</td><td><input type="text" name="firstname" /></td></tr>
+    <tr><td>Surname:</td><td><input type="text" name="surname" /></td></tr>
+    <tr><td>Address:</td><td><input type="text" name="address1" /></td></tr>
+    <tr><td>Address2:</td><td><input type="text" name="address2" /></td></tr>
+    <tr><td>City/Town:</td><td><input type="text" name="town" /></td></tr>
+    <tr><td>County:</td><td><input type="text" name="county" /></td></tr>
+    <tr><td>Phone:</td><td><input type="text" name="phone" /></td></tr>
+    <tr><td>Calendar Link:</td><td><input type="text" name="callink" /></td></tr>
+    </table>
+    <table align=center class="tblheader"
+    <tr><td>Brief Description of your Interests</td></tr>
+    <tr><td><textarea cols="40" name="desc" rows="8"></textarea></td></tr>
+    </table>
+      <p align=center><input type="submit" value="Register" /></p>
+    </form>
+
+  </body>
+</html>
