@@ -9,8 +9,7 @@
 	<script type="text/javascript" src="/js/jquery.ui.core.js"></script>
 	<script type="text/javascript" src="/js/jquery.ui.widget.js"></script>
 	<script type="text/javascript" src="/js/jquery.ui.datepicker.js"></script>
-    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAWjhbOY0D3sv2pmdkVgqFURT5FMJh5cWC-P-IKueY88ewXzQdfxRril6YgDECCqK1rWib6H-TglhTqw" type="text/javascript"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places" type="text/javascript"></script>
 <script type="text/javascript">
         function load(x,y) {
             if (GBrowserIsCompatible()) {
@@ -27,10 +26,16 @@
             }
         }
 
-        function map_load() {
-            x = document.getElementById("lat").value;
-            y = document.getElementById("lng").value;
-            load(x, y);
+        
+
+        function load(x, y) {
+            var pyrmont = new google.maps.LatLng(x, y);
+            map = new google.maps.Map(document.getElementById('map'), {
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: pyrmont,
+                zoom: 15
+            });
+            var marker = new google.maps.Marker({ position: pyrmont, map: map, title: "Hello World!" });
         }
  
     function load_2(css_ref, new_url) {
@@ -129,13 +134,24 @@
         if (document.getElementById("lat")) {
             map_load()
         }
-        setTimeout(online, 1000)
+        setTimeout(online, 15000)
     }
 //-->
 </script>
-
+    
               <style type="text/css">
-                  .eventheader
+
+                  body {
+                      font-family: sans-serif;
+                      font-size: 14px;
+                  }
+
+                  #map_canvas {
+                      height: 280px;
+                      width: 280px;
+                      margin-top: 0.6em;
+                  }
+                      .eventheader;
                   {
                       font-family: Arial;
                       font-size: 16px;

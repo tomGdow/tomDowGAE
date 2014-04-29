@@ -76,17 +76,7 @@
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
-    <style type="text/css">
-        body {
-            font-family: sans-serif;
-            font-size: 14px;
-        }
-        #map_canvas {
-            height: 280px;
-            width: 280px;
-            margin-top: 0.6em;
-        }
-    </style>
+    
 
 
     <style type="text/css">
@@ -102,7 +92,7 @@
     </style>
 </head>
 
-<body onload="load()" onunload="GUnload()" >
+<body>
           <table border=0 width=530px class="eventheader">
               <tr>
                   <td>
@@ -131,18 +121,11 @@
                      </form>
                   </td>
                   <td valign=top>
-                      <form action="#" onsubmit="showAddress(this.address.value); return false">
-                         <p>  
-                          <br />      
-                          <input type="text" size="25" name="address" id="address" value="Dublin Ireland" />
-                          <input type="submit" value="Search!" />
-                          </p>
-                      </form>
-
-                      <p>
-                      <div align="center" id="map" style="width: 300px; height: 250px"><br/></div>
-                       </p>
+                      Location:<br />
+                      <div>
+                          <input id="searchTextField" type="text" size="40" />
                       </div>
+                      <div id="map_canvas"></div>
                   </td>
               </tr>
           </table>
