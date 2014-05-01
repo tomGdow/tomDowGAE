@@ -94,7 +94,7 @@
       <file leaf-file-name="ViewEventForm.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_templates/ViewEventForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -148,10 +148,9 @@
       <file leaf-file-name="CreateEventForm.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_templates/CreateEventForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="17" selection-start="5658" selection-end="5658" vertical-scroll-proportion="0.53932583" vertical-offset="1752" max-vertical-offset="2771">
+            <state line="87" column="21" selection-start="4157" selection-end="4157" vertical-scroll-proportion="0.031835206" vertical-offset="1462" max-vertical-offset="2482">
               <folding>
                 <element signature="n#style#0;n#select#0;n#td#0;n#tr#0;n#table#1;n#form#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -364,16 +363,16 @@
       <workItem from="1398687916736" duration="2683000" />
       <workItem from="1398698063334" duration="3196000" />
       <workItem from="1398770156145" duration="1476000" />
-      <workItem from="1398772726135" duration="444000" />
+      <workItem from="1398772726135" duration="627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7799000" />
+    <option name="totallyTimeSpent" value="7982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="2" width="1346" height="728" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -393,7 +392,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -487,14 +486,15 @@
         <state line="120" column="17" selection-start="5658" selection-end="5658" vertical-scroll-proportion="0.0" vertical-offset="1752" max-vertical-offset="2771">
           <folding>
             <element signature="n#style#0;n#select#0;n#td#0;n#tr#0;n#table#1;n#form#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="18" selection-start="7512" selection-end="7512" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4828" />
+        <state line="204" column="18" selection-start="7512" selection-end="7512" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4828">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_templates/RegistrationForm.html">
@@ -558,14 +558,15 @@
         <state line="11" column="0" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="3400">
           <folding>
             <element signature="n#style#0;n#select#0;n#td#0;n#tr#0;n#table#1;n#form#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="13" selection-start="7014" selection-end="7014" vertical-scroll-proportion="0.0" vertical-offset="3162" max-vertical-offset="4828" />
+        <state line="193" column="13" selection-start="7014" selection-end="7014" vertical-scroll-proportion="0.0" vertical-offset="3162" max-vertical-offset="4828">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_templates/login.html">
@@ -688,7 +689,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="55" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.5411985" vertical-offset="0" max-vertical-offset="4828" />
+        <state line="17" column="55" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.5411985" vertical-offset="0" max-vertical-offset="4828">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_templates/create_event.html">
@@ -700,10 +703,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_templates/CreateEventForm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="17" selection-start="5658" selection-end="5658" vertical-scroll-proportion="0.53932583" vertical-offset="1752" max-vertical-offset="2771">
+        <state line="87" column="21" selection-start="4157" selection-end="4157" vertical-scroll-proportion="0.031835206" vertical-offset="1462" max-vertical-offset="2482">
           <folding>
             <element signature="n#style#0;n#select#0;n#td#0;n#tr#0;n#table#1;n#form#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

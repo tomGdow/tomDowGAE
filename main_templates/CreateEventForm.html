@@ -14,7 +14,7 @@
     <script type="text/javascript">
         function initialize() {
             var mapOptions = {
-                center: new google.maps.LatLng(-33.8688, 151.2195),
+                center: new google.maps.LatLng(53.349383, -6.243289),
                 zoom: 13,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
@@ -76,14 +76,38 @@
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
-    
-
-
     <style type="text/css">
         body {
             font-family: sans-serif;
+            margin: 0px;
+            padding: 0px;
+            background-image: url(/images/addevent.jpg);
+            background-repeat: repeat-x;
+            background-color: #bbcd72;
             font-size: 14px;
         }
+
+        .eventheader {
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: bold;
+            color: #990000;
+        }
+
+        .eventtext {
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0000A0;
+        }
+
+        .tblheader {
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: bold;
+            color: #990000;
+        }
+
         #map_canvas {
             height: 280px;
             width: 280px;
@@ -120,6 +144,7 @@
                                                     
                      </form>
                   </td>
+
                   <td valign=top>
                       Location:<br />
                       <div>
@@ -127,6 +152,7 @@
                       </div>
                       <div id="map_canvas"></div>
                   </td>
+
               </tr>
           </table>
              

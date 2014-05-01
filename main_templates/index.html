@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Sports Buddy</title>
+<title>Zara's Sporting Friends</title>
 <link href="/css/style.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/images/icon.ico" />
 	<script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
@@ -10,148 +10,140 @@
 	<script type="text/javascript" src="/js/jquery.ui.widget.js"></script>
 	<script type="text/javascript" src="/js/jquery.ui.datepicker.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places" type="text/javascript"></script>
-<script type="text/javascript">
-        function load(x,y) {
-            if (GBrowserIsCompatible()) {
-                var map = new GMap2(document.getElementById("map"));
-                map.addControl(new GSmallMapControl());
-                map.addControl(new GMapTypeControl());
-                var center = new GLatLng(x,y);
-                map.setCenter(center, 15);
-                geocoder = new GClientGeocoder();
-                var marker = new GMarker(center, { draggable: true });
-                map.addOverlay(marker);
-                document.getElementById("lat").value = center.lat().toFixed(5);
-                document.getElementById("lng").value = center.lng().toFixed(5);
-            }
-        }
-
-        
-
+    <script type="text/javascript">
         function load(x, y) {
             var pyrmont = new google.maps.LatLng(x, y);
+
             map = new google.maps.Map(document.getElementById('map'), {
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 center: pyrmont,
                 zoom: 15
             });
-            var marker = new google.maps.Marker({ position: pyrmont, map: map, title: "Hello World!" });
-        }
- 
-    function load_2(css_ref, new_url) {
-        $(css_ref).load(new_url);
-    }
 
-    function StartSearch() {
-        sport1 = document.getElementById("sportinput").value;
-        location1 = document.getElementById("locationinput").value;
-
-        var search_url = "http://jmccarthycalendar.appspot.com/search?";
-        var tmp = 0;
-        if (sport1 == "Sport") {
-            // No Sport input
-        } else {
-            search_url = search_url + "sport=" + sport1;
-            tmp = 1;
+            var marker = new google.maps.Marker({ position: pyrmont, map: map, title: "Welcome to Dublin" });
         }
 
-        if (location1 == "Location") {
-            // No Sport input
-        } else {
-            if (tmp == 0) {
-                search_url = search_url + "location=" + location1;
+        function map_load() {
+            x = document.getElementById("lat").value;
+            y = document.getElementById("lng").value;
+            load(x, y);
+        }
+
+        function load_2(css_ref, new_url) {
+            $(css_ref).load(new_url);
+        }
+
+        function StartSearch() {
+            sport1 = document.getElementById("sportinput").value;
+            location1 = document.getElementById("locationinput").value;
+
+            var search_url = "http://zaradowfriends.appspot.com/search?";
+            var tmp = 0;
+            if (sport1 == "Sport") {
+                // No Sport input
             } else {
-                search_url = search_url + "&location=" + location1;
+                search_url = search_url + "sport=" + sport1;
+                tmp = 1;
             }
+
+            if (location1 == "Location") {
+                // No Sport input
+            } else {
+                if (tmp == 0) {
+                    search_url = search_url + "location=" + location1;
+                } else {
+                    search_url = search_url + "&location=" + location1;
+                }
+            }
+            // alert(search_url);
+            // http://zaradowfriends.appspot.com/search
+            CLoad('Search Results', search_url)
         }
-        // alert(search_url);
-        // http://jmccarthycalendar.appspot.com/search?sport=Golf&location=naas
-        CLoad('Search Results', search_url)
-    }
 
-    function AddEventToCalendar(eid, et, ed, dp, loc) {
-        var save_url = "http://jmccarthycalendar.appspot.com/AddUser?"
-        save_url = save_url + "eventid=" + eid + "&";
-        save_url = save_url + "event_title=" + et + "&";
-        save_url = save_url + "event_description=" + ed + "&";
-        save_url = save_url + "datepicker=" + dp + "&";
-        save_url = save_url + "location=" + loc;
-        //alert(save_url);
-        CLoad('Event Added to Calendar', save_url)
-    }
-
-    function accept_terms() {
-        var load = window.open('http://jmccarthycalendar.appspot.com/UserLogin', '', 'scrollbars=no,menubar=no,height=600,width=800,resizable=yes,toolbar=no,location=no,status=no');
-    }
-
-
-    var xmlHttp
-
-    function GetXmlHttpObject() {
-        var xmlHttp = null;
-        try {
-            // Firefox, Opera 8.0+, Safari
-            xmlHttp = new XMLHttpRequest();
+        function AddEventToCalendar(eid, et, ed, dp, loc) {
+            var save_url = "http://zaradowfriends.appspot.com/AddUser?"
+            save_url = save_url + "eventid=" + eid + "&";
+            save_url = save_url + "event_title=" + et + "&";
+            save_url = save_url + "event_description=" + ed + "&";
+            save_url = save_url + "datepicker=" + dp + "&";
+            save_url = save_url + "location=" + loc;
+            //alert(save_url);
+            CLoad('Event Added to Calendar', save_url)
         }
-        catch (e) {
-            // Internet Explorer
+
+        function accept_terms() {
+            var load = window.open('http://zaradowfriends.appspot.com/UserLogin', '', 'scrollbars=no,menubar=no,height=600,width=800,resizable=yes,toolbar=no,location=no,status=no');
+        }
+
+
+        var xmlHttp
+
+        function GetXmlHttpObject() {
+            var xmlHttp = null;
             try {
-                xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+                // Firefox, Opera 8.0+, Safari
+                xmlHttp = new XMLHttpRequest();
             }
             catch (e) {
-                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                // Internet Explorer
+                try {
+                    xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch (e) {
+                    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+            return xmlHttp;
+        }
+
+        function CLoad(header, str) {
+            document.getElementById("leftheading").innerHTML = header;
+            xmlHttp2 = GetXmlHttpObject();
+            if (xmlHttp2 == null) {
+                alert("Your browser does not support AJAX!");
+                return;
+            }
+            var url = str;
+            xmlHttp2.onreadystatechange = stateChangedCLoad;
+            xmlHttp2.open("GET", url, true);
+            xmlHttp2.send(null);
+            xmlHttp2.close;
+        }
+        function stateChangedCLoad() {
+            if (xmlHttp2.readyState == 4) {
+                document.getElementById("lefttxtblank").innerHTML = "";
+                document.getElementById("lefttxtblank").innerHTML = xmlHttp2.responseText;
             }
         }
-        return xmlHttp;
-    }
+    </script>
 
-    function CLoad(header, str) {
-        document.getElementById("leftheading").innerHTML = header;
-        xmlHttp2 = GetXmlHttpObject();
-        if (xmlHttp2 == null) {
-            alert("Your browser does not support AJAX!");
-            return;
-        }
-        var url = str;
-        xmlHttp2.onreadystatechange = stateChangedCLoad;
-        xmlHttp2.open("GET", url, true);
-        xmlHttp2.send(null);
-        xmlHttp2.close;
-    }
-    function stateChangedCLoad() {
-        if (xmlHttp2.readyState == 4) {
-            document.getElementById("lefttxtblank").innerHTML = "";
-            document.getElementById("lefttxtblank").innerHTML = xmlHttp2.responseText;
-        }
-    }
-</script> 
+
 
 <script type="text/javascript">
-<!--
+
     var delayTime = 1000
     setTimeout(online, delayTime)
     function online() {
         if (document.getElementById("lat")) {
-            map_load()
+            if (!loaded) {
+                map_load();
+                loaded = true;
+            }
         }
         setTimeout(online, 15000)
     }
-//-->
+
 </script>
     
               <style type="text/css">
 
-                  body {
-                      font-family: sans-serif;
-                      font-size: 14px;
-                  }
-
+          
                   #map_canvas {
                       height: 280px;
                       width: 280px;
                       margin-top: 0.6em;
                   }
-                      .eventheader;
+                  .eventheader
                   {
                       font-family: Arial;
                       font-size: 16px;
@@ -194,7 +186,7 @@
     <div id="contenttxtblank">
       <div id="menu">
         <ul>
-          <li><a href="http://jmccarthycalendar.appspot.com/" class="menu">Home</a></li>
+          <li><a href="http://zaradowfriends.appspot.com/" class="menu">Home</a></li>
           <li class="menusap"></li>
           <li><a href="#" class="menu" onclick="CLoad('All Events','/events')">Events</a></li>
           <li class="menusap"></li>
@@ -235,25 +227,20 @@
             <div id="oursearch">
                 <h5>Search...</h5>
             </div>
-              <label>
-                <input name="friendcheck" type="checkbox" class="searchfriends" id="friendcheck" /><span class="gentext">Find a Friend</span>
-              </label>
+              
             </div>
             <div id="Div1">
-              <label>
-                <input name="clubcheck" type="checkbox" class="searchfriends" id="clubcheck" /><span class="gentext">Find a Club</span>
-              </label>
+              
             </div>
             <div id="Div2">
-              <label>
-                <input name="eventcheck" type="checkbox" class="searchfriends" id="eventcheck" /><span class="gentext">Find Event</span>
-              </label>
+              
             </div>
             <div id="searchinput">
               <label>
                 <input name="textfield" type="text" class="searchinput" id="sportinput" value="Sport" />
               </label>
             </div>
+              <br />
             <div id="searchlocation">
               <label>
                 <input name="locationinput" type="text" class="searchinput" id="locationinput" value="Location" />
@@ -287,8 +274,9 @@
   </div>
   <div id="footerbg">
     <div id="copyrights">© Copyright Sports Friends 2011. All Rights Reserved.</div>
-    <div id="designedby">Designed by Super Coders</div>
+    <div id="designedby">Designed by Super Cooders</div>
   </div>
 </div>
+
 </body>
 </html>
